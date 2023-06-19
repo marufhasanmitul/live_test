@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
+import 'CounterScreen.dart';
 
 void main() {
-  runApp(const myApp());
+  runApp(CounterApp());
 }
 
-class myApp extends StatelessWidget {
-  const myApp({super.key});
-
+class CounterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      darkTheme: ThemeData(primarySwatch: Colors.cyan),
-      color: Colors.green,
       debugShowCheckedModeBanner: false,
-
+      title: 'Counter App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: CounterScreen(),
     );
   }
 }
-
-
